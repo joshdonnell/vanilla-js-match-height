@@ -1,3 +1,3 @@
-import MatchHeight from "../dist/index";
+import { MatchHeight } from "../dist/index";
 
 new MatchHeight('.hello');

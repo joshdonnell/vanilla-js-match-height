@@ -1,0 +1,25 @@
+{
+  "name": "vanilla-js-match-height",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshDonnell/vanilla-js-match-height.git"
+  },
+  "keywords": [
+    "match-height",
+    "js",
+    "js-match-height",
+    "vanilla-js"
+  ],
+  "author": "Josh Donnell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshDonnell/vanilla-js-match-height/issues"
+  },
+  "homepage": "https://github.com/JoshDonnell/vanilla-js-match-height#readme"
+}

@@ -4,7 +4,7 @@
  *  new MatchHeight(CHILD_CLASS, PARENT_CLASS ( Optional ), BY_ROW ( Optional, Default to true ));
  */
 
- export class MatchHeight {
+ export default class MatchHeight {
     constructor(element, parent = null, byrow = true) {
         // The User Settings
         this.element = element;

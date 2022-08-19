@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/JoshDonnell/vanilla-js-match-height/issues"
   },
-  "homepage": "https://github.com/JoshDonnell/vanilla-js-match-height#readme"
+  "homepage": "https://github.com/JoshDonnell/vanilla-js-match-height#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.49"
+  }
 }

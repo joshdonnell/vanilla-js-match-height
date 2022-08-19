@@ -1,2 +1,4 @@
 index.html
 node_modules
+test/dist
+mix-manifest.json

@@ -22,11 +22,7 @@
         // Run on Resize
         window.addEventListener("resize", () => {
             setTimeout(() =>  {
-                if (this.elements) {
-                    this.elements.forEach(elements => {
-                        this.setLargestHeight(elements);
-                    });
-                }
+                this.getParents();
             });
         });
     }
@@ -58,30 +54,33 @@
             let groups = [];
             
             elements.forEach( element => {
-                let offset = element.getBoundingClientRect().top + window.scrollY;
+                let offset = Math.round(element.getBoundingClientRect().top + window.scrollY);
                 groups[offset] = [];
             });
 
             elements.forEach(element => {
-                let offset = element.getBoundingClientRect().top + window.scrollY;
+                let offset = Math.round(element.getBoundingClientRect().top + window.scrollY);
                 groups[offset].push(element);
             });
 
-            groups.forEach(elements => {
-                this.setLargestHeight(elements);
+            groups.forEach(group => {
+                this.setLargestHeight(group);
+
+                // Set to call on resize
+                this.elements.push(group);
             });
         } else {
             this.setLargestHeight(elements);
+
+            // Set to call on resize
+            this.elements.push(elements);
         }
     }
 
     // Set the heights of the elements
     setLargestHeight(elements) {
         let heights = [];
-
-        // Set to call on resize
-        this.elements.push(elements);
-
+        
         elements.forEach(element => {
             element.style.height = null;
             heights.push(element.offsetHeight);

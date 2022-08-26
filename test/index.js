@@ -1,4 +1,4 @@
-import { MatchHeight } from "../vanilla-js-match-height";
+import MatchHeight from "../dist/index";
 
-new MatchHeight('.hello', '.parent-1');
+let test = new MatchHeight('.hello', '.parent-1');
 new MatchHeight('.my-class', '.parent-2');

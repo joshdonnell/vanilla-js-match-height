@@ -1,7 +1,7 @@
 /**
  * Vanilla JS Match Height
  * 
- * v0.2.0
+ * v0.2.1
  * 
  * Josh Donnell
  * 
@@ -25,20 +25,19 @@
         // Setup to cache our elements & parents
         this.elements = {};
 
-        // Timer to stop Resize triggering twice
-        let resizeTimer;
-
         // Check for class element
         if (element) {
-            // Set heights on DOM loa
+            // Set heights on DOM load
             window.addEventListener("DOMContentLoaded", () => {
                 this.reset();
             });
 
             // Update heights and rows on resize
             window.addEventListener("resize", () => {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(this.update(), 200);
+                // Set a timeout to allow sliders and other JS to trigger first
+                setTimeout(() => {
+                    this.update();
+                }, 200);
             });
         } else {
             // Log Error if no class found

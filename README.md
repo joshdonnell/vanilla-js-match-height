@@ -1,6 +1,6 @@
 <h1 align="center">Vanilla JS Match Height</h1>
 
-<p align="center">A jQuery free equivilent of jQuery match height, a simple, lightweight way to make elements the same height. At less than 4kb ( 2kb Gziped ) this tiny package packs a big punch of functionality with helpers to make your life easier.</p>
+<p align="center">A jQuery free equivilent of jQuery match height, a simple, lightweight way to make elements the same height. At 2kb ( 1.1kb Gziped ) this tiny package packs a big punch of functionality with helpers to make your life easier.</p>
 
 ---
 

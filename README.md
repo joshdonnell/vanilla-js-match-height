@@ -9,10 +9,9 @@
 - [Docs](https://joshdonnell.github.io/vanilla-js-match-height/)
 - [Install](#install)
 - [How To Use](#how-to-use)
-- Examples coming soon...
+- [Examples](#examples)
 - [Author](#author)
 - [Support](#support)
-- Changelog coming soon...
 
 ## Install
 
@@ -42,29 +41,34 @@ Or include the script in your HTML.
 import MatchHeight from 'vanilla-js-match-height';
 
 // New MatchHeight - The only required parameter 
-// is the element class at the start the parent
-// and by row boolean are both optional. By
-// default the ByRow is set to true. The timeout
-// can be set to choose a delay on load for slider
-// for example.
-new MatchHeight(Element, Parent, ByRow, Timeout);
+// is the element class at the start. The second parameter
+// is an optional object for the settings. The 3 settings
+// that can be passed into this object are, parent, byRow
+// and timeOut.
+new MatchHeight(Element, Options);
 
 // Full Example of the format
-new MatchHeight('.my-class', '.my-parent', false, 300);
+new MatchHeight('.my-class', 
+    {
+        parent: '.my-parent', // A parent class or ID to group items ( Default value : null )
+        byRow: true, // Use the elemnt offset to group them by row ( Default value : true )
+        timeOut: 300 // Sets A Timout On Load mainly for sliders ( Default value : 50 )
+    }
+);
 ```
 
 Out of the box Vanilla JS Match Height will update on resize and will recalculate the rows on resize too.
 
-<!-- ## Examples
+## Examples
 
-- [Basic Example](https://codepen.io/tannerhodges/pen/593ba4f9811a53ed5b9f03f8890d6c52)
-- [Parent Example](https://codepen.io/tannerhodges/pen/699e29b01d4851ccde4052486cfec63c)
+- [Basic Example](https://codepen.io/joshdonnell/pen/zYWVOVo)
+<!-- - [Parent Example](https://codepen.io/tannerhodges/pen/699e29b01d4851ccde4052486cfec63c)
 - [ByRow Disabled Example](https://codepen.io/tannerhodges/pen/d38706e6bbc7ac61e2942ab4a3d292d6)
 - [Update Example](https://codepen.io/tannerhodges/pen/f0718f8b1649acb1c1d191564e0477e0)
 - [Reset Example](https://codepen.io/tannerhodges/pen/f0718f8b1649acb1c1d191564e0477e0)
-- [Debug Example](https://codepen.io/tannerhodges/pen/f0718f8b1649acb1c1d191564e0477e0)
+- [Debug Example](https://codepen.io/tannerhodges/pen/f0718f8b1649acb1c1d191564e0477e0) -->
 
-See the [Docs](https://joshdonnell.github.io/vanilla-js-match-height/) for the full list of options. -->
+See the [Docs](https://joshdonnell.github.io/vanilla-js-match-height/) for the full list of options.
 
 ## Author
 

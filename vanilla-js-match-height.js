@@ -1,7 +1,7 @@
 /**
  * Vanilla JS Match Height
  * 
- * v0.2.2
+ * v1.0.0
  * 
  * Josh Donnell
  * 
@@ -13,15 +13,16 @@
      * Init
      * 
      * @param {String} element 
-     * @param {String} parent 
-     * @param {Boolean} byrow 
+     * @param {Object} options 
      */
-    constructor(element, parent = null, byrow = true, timeout = 0 ) {
+    constructor(element, options = {}) {
         // User settings Passed in at setup
         this.element = element;
-        this.parent = parent;
-        this.byrow = byrow;
-        this.timeout = timeout;
+        this.options = {
+            parent: options.parent ?? null,
+            byRow: options.byRow ?? true,
+            timeOut: options.timeOut ?? 50,
+        };
 
         // Setup to cache our elements & parents
         this.elements = {};
@@ -32,7 +33,7 @@
             window.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     this.reset();
-                }, this.timeout);
+                }, this.options.timeout);
             });
 
             // Update heights and rows on resize
@@ -56,9 +57,9 @@
      */
     findElements() {
         // Check if parent and if parent has elements
-        if (this.parent && document.querySelectorAll(this.parent)) {
+        if (this.options.parent && document.querySelectorAll(this.options.parent).length) {
             // Loop over to get the elements
-            document.querySelectorAll(this.parent).forEach(parentGroup => {
+            document.querySelectorAll(this.options.parent).forEach(parentGroup => {
                 // Find all elements in parent group
                 let elements = parentGroup.querySelectorAll(this.element);
 
@@ -100,7 +101,7 @@
                 let offset = 0;
 
                 // Check if ByRow is enabled, this is set to true by default
-                if (this.byrow) {
+                if (this.options.byRow) {
                     // Calculate the elements offset to the page
                     offset = Math.round(element.getBoundingClientRect().top + window.scrollY);
                 }

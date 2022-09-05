@@ -11,7 +11,7 @@
 - [How To Use](#how-to-use)
 - Examples coming soon...
 - [Author](#author)
-- [Support](#🤝-support)
+- [Support](#support)
 - Changelog coming soon...
 
 ## Install
@@ -41,14 +41,16 @@ Or include the script in your HTML.
 ```js
 import MatchHeight from 'vanilla-js-match-height';
 
-// New MatchHeight - The only required paramter 
+// New MatchHeight - The only required parameter 
 // is the element class at the start the parent
 // and by row boolean are both optional. By
-// default the ByRow is set to true.
-new MatchHeight(Element, Parent, ByRow);
+// default the ByRow is set to true. The timeout
+// can be set to choose a delay on load for slider
+// for example.
+new MatchHeight(Element, Parent, ByRow, Timeout);
 
 // Full Example of the format
-new MatchHeight('.my-class', '.my-parent', false);
+new MatchHeight('.my-class', '.my-parent', false, 300);
 ```
 
 Out of the box Vanilla JS Match Height will update on resize and will recalculate the rows on resize too.
@@ -72,7 +74,7 @@ See the [Docs](https://joshdonnell.github.io/vanilla-js-match-height/) for the f
 - [Email](mailto:hello@joshdonnell.co.uk?subject=Hi "Hi!")
 - [Twitter](https://twitter.com/JoshDonnell97 "Twitter")
 
-## 🤝 Support
+## Support
 
 Contributions, issues, and feature requests are welcome!
 

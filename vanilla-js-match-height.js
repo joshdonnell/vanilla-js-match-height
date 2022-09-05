@@ -1,7 +1,7 @@
 /**
  * Vanilla JS Match Height
  * 
- * v0.2.1
+ * v0.2.2
  * 
  * Josh Donnell
  * 
@@ -16,11 +16,12 @@
      * @param {String} parent 
      * @param {Boolean} byrow 
      */
-    constructor(element, parent = null, byrow = true) {
+    constructor(element, parent = null, byrow = true, timeout = 0 ) {
         // User settings Passed in at setup
         this.element = element;
         this.parent = parent;
         this.byrow = byrow;
+        this.timeout = timeout;
 
         // Setup to cache our elements & parents
         this.elements = {};
@@ -29,7 +30,9 @@
         if (element) {
             // Set heights on DOM load
             window.addEventListener("DOMContentLoaded", () => {
-                this.reset();
+                setTimeout(() => {
+                    this.reset();
+                }, this.timeout);
             });
 
             // Update heights and rows on resize

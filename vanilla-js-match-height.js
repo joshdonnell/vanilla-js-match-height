@@ -33,7 +33,7 @@
             window.addEventListener("DOMContentLoaded", () => {
                 setTimeout(() => {
                     this.reset();
-                }, this.options.timeout);
+                }, this.options.timeOut);
             });
 
             // Update heights and rows on resize

@@ -1,14 +1,14 @@
 {
   "name": "vanilla-js-match-height",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile-test-watch" : "esbuild --bundle test/index.js --outfile=test/dist/test.js --watch",
     "compile-test-production" : "esbuild --bundle test/index.js --outfile=test/dist/test.js --minify",
-    "compile-watch" : "esbuild vanilla-js-match-height.js --outfile=dist/index.js --watch",
-    "compile-production" : "esbuild vanilla-js-match-height.js --outfile=dist/index.js --minify"
+    "compile-watch" : "esbuild src/app.ts --outfile=dist/index.js --watch",
+    "compile-production" : "esbuild src/app.ts --outfile=dist/index.js --minify"
   },
   "repository": {
     "type": "git",

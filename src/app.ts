@@ -1,7 +1,7 @@
 /**
  * Vanilla JS Match Height
  * 
- * v1.0.5
+ * v1.0.6
  * 
  * Josh Donnell
  * 
@@ -31,11 +31,13 @@ class MatchHeight implements IMatchHeight  {
     // Check for class element
     if (this.element) {
       // Set heights on DOM load
-      window.addEventListener("DOMContentLoaded", () => {
-          setTimeout(() => {
-              this.reset();
-          }, this.options.timeOut);
-      });
+      if (document.readyState !== 'loading') {
+        this.init();
+      } else {
+        document.addEventListener('DOMContentLoaded', () => {
+          this.init();
+        });
+      }
 
       // Update heights and rows on resize
       window.addEventListener("resize", () => {
@@ -48,6 +50,16 @@ class MatchHeight implements IMatchHeight  {
       // Sent the no class error to the console
       this.error('class')
     }
+  }
+
+  /**
+   * Simple function to run on inital load
+   * after the dom is registered
+   */
+  init() {
+    setTimeout(() => {
+        this.reset();
+    }, this.options.timeOut);
   }
 
 

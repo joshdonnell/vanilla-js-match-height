@@ -1,6 +1,6 @@
 {
   "name": "vanilla-js-match-height",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A jQuery free equivilent of jQuery match height, a simple, lightweight way to make elements the same height.",
   "main": "dist/index.js",
   "types": "dist/app.d.ts",

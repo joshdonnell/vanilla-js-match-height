@@ -1,7 +1,7 @@
 /**
  * Vanilla JS Match Height
  * 
- * v1.0.2
+ * v1.0.3
  * 
  * Josh Donnell
  * 

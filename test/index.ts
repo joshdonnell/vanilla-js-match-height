@@ -1,4 +1,4 @@
-import MatchHeight from "../dist/index";
+import MatchHeight from "../dist/index.js";
 
 let test = new MatchHeight('.hello', {
     parent: '.parent-1',

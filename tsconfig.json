@@ -1,5 +1,8 @@
 {
+    "files": ["src/app.ts"],
     "compilerOptions": {
-      "lib": ["es5", "es6", "dom"]
-    },
+      "lib": ["es5", "es6", "dom"],
+      "declaration": true,
+      "outDir": "./dist"
+    }
   }

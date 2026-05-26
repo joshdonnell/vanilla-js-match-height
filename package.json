@@ -34,7 +34,7 @@
   },
   "homepage": "https://github.com/JoshDonnell/vanilla-js-match-height#readme",
   "devDependencies": {
-    "esbuild": "^0.15.6",
+    "esbuild": "^0.25.0",
     "tsc": "^2.0.4"
   }
 }
